@@ -1,0 +1,41 @@
+body {
+	font-family: Oswald;
+	font-weight: normal;
+	font-style: normal;
+	background-color:#000000;
+	margin-left: 14px;
+	margin-right: 14px;
+}
+
+
+
+
+#wrap {
+	min-width: 900px;
+	min-height: 850px;
+	margin: 0 auto;
+}
+
+
+div.body {
+	padding: 0;
+	margin: auto;
+	display: block;
+	position: absolute;
+	top: 0;
+	bottom: 0;
+	left: 0;
+	right: 0;
+}
+
+div.block {
+	border: 1px;
+	border-style: solid;
+	border-color: #000000;
+	padding: 4px;
+	padding-left: 1em;
+	padding-right: 1em;
+	padding-bottom: 4em;
+	margin: 12px;
+	text-align: center;
+}
