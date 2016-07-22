@@ -53,7 +53,7 @@ void mousePressed() {
       double randY = Math.random() * 5 - 2.5;
       float X = (float) randX;
       float Y = (float) randY;
-      double rand = Math.random() * 6 + 6;
+      double rand = Math.random() * 4 + 6;
       float r = (float) rand;
       //Create new (random) planet
       planets[currentPlanet].start(mouseX, mouseY, X, Y, r);
@@ -122,8 +122,8 @@ class Planet {
   void leak(int timeCount){
     if (on == true && timeCount % 20 == 0 ){
       this.rad -= .025
-      if ( this.rad <= .5 ){
-        this.rad = .5;
+      if ( this.rad <= 1 ){
+        this.rad = 1;
       }
       this.mass = this.rad * this.rad;
       
