@@ -53,7 +53,7 @@ void mousePressed() {
       double randY = Math.random() * 5 - 2.5;
       float X = (float) randX;
       float Y = (float) randY;
-      double rand = Math.random() * 4 + 6;
+      double rand = Math.random() * 6 + 4;
       float r = (float) rand;
       //Create new (random) planet
       planets[currentPlanet].start(mouseX, mouseY, X, Y, r);
