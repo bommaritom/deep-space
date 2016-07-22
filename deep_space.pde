@@ -8,6 +8,8 @@ int timeCount;
 float G;
 
 void setup(){
+  timeCount = 0;
+
   size(800, 600);
   background(8, 126, 139);
   cursor(CROSS);
