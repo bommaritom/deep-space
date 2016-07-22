@@ -25,11 +25,12 @@ void setup(){
 }
 
 void draw() {
+  timeCount++;
   background(8, 126, 139);
   
   for (int i = 0; i < numPlanets; i++) {
   
-    timeCount++;
+    
     G = .001 * exp( 46.05 * (gslider.getPos()/7958.56) - 0.0524847 );
     print (" G equals:"); print(G);
     planets[i].display();
