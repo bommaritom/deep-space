@@ -2,6 +2,7 @@ Planet[] planets;
 int numPlanets = 500;
 int currentPlanet = 0;
 HScrollbar gslider;
+int timeCount;
 
 //Gravitational Constant
 float G;
@@ -25,10 +26,13 @@ void draw() {
   background(8, 126, 139);
   
   for (int i = 0; i < numPlanets; i++) {
+  
+    timeCount++;
     G = .001 * exp( 46.05 * (gslider.getPos()/7958.56) - 0.0524847 );
     print (" G equals:"); print(G);
     planets[i].display();
     planets[i].move();
+    planets[i].leak(timeCount);
     
     gslider.update();
     gslider.display();
@@ -109,6 +113,16 @@ class Planet {
       c = color(255);
     }
     on = true;
+  }
+  
+  
+  void leak(int timeCount){
+    if (on == true){
+      if ( timeCount % 50 == 0 ){
+        this.rad--;
+        this.mass = this.rad * this.rad;
+      }
+    }
   }
   
   void move() {
