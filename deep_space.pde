@@ -299,7 +299,7 @@ class Planet {
   
   void display() {
     if (on == true) {
-      if (this.rad < 3) {
+      if (this.rad < .5) {
         this.on = false;
       }
       stroke(c);
