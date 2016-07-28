@@ -296,7 +296,7 @@ class Planet {
   
   void display() {
     if (on == true) {
-      if (this.rad < .1) {
+      if (this.rad < .01) {
         this.on = false;
       }
       stroke(c);
