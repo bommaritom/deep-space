@@ -121,7 +121,7 @@ class Planet {
   
   void leak(int timeCount){
     if (on == true && timeCount % 20 == 0 ){
-      this.rad -= .025
+      this.rad -= .08
       if ( this.rad <= 1 ){
         this.rad = 1;
       }
