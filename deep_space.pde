@@ -119,13 +119,13 @@ class Planet {
   }
   
   
-  void leak(int timeCount){
-    if (on == true && timeCount % 20 == 0 ){
-      this.rad -= .08
-      this.mass = this.rad * this.rad;
-      
-    }
-  }
+  //void leak(int timeCount){
+  //  if (on == true && timeCount % 20 == 0 ){
+  //    this.rad -= .08
+  //    this.mass = this.rad * this.rad;
+  //    
+  //  }
+  //}
   
   void move() {
     if (on == true) {
