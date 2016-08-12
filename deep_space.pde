@@ -45,8 +45,8 @@ void draw() {
   text("Gravitational Constant", 500, 35);
 }
 
-void mousePressed() {
-  while (gslider.over != true) {
+void mouseDragged() {
+  if (gslider.over != true) {
     if (mouseButton == LEFT) {
       //Generate random parameters
       double randX = Math.random() * 5 - 2.5;
