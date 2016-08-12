@@ -103,7 +103,7 @@ class Planet {
     xPos = newXPos;
     yPos = newYPos;
     rad = newRad;
-    mass = rad * rad;
+    mass = rad * rad * 100;
     float test = (float) Math.random() * 400;
     if (test > 1) {
       anti = false;
@@ -118,7 +118,7 @@ class Planet {
     on = true;
   }
   
-  
+  //not used
   void leak(int timeCount){
     if (on == true && timeCount % 20 == 0 ){
       this.rad -= .08
@@ -311,7 +311,7 @@ class Planet {
     
     if (this.anti == planets[NUMPLANET2].anti) {
       planets[NUMPLANET2].mass = mass1 + mass2;
-      planets[NUMPLANET2].rad = sqrt(planets[NUMPLANET2].mass);
+      planets[NUMPLANET2].rad = sqrt(planets[NUMPLANET2].mass/100);
       planets[NUMPLANET2].xVel = (mass1 * xVel1 + mass2 * xVel2)/(mass1 + mass2);
       planets[NUMPLANET2].yVel = (mass1 * yVel1 + mass2 * yVel2)/(mass1 + mass2);
       planets[NUMPLANET2].xPos += ( ((mass1 * xPos1 + mass2 * xPos2)/(mass1 + mass2)) - xPos2 );
@@ -319,7 +319,7 @@ class Planet {
     } else if (this.anti != planets[NUMPLANET2].anti) {
       if (mass1 > mass2) {
         planets[NUMPLANET2].mass = mass1 - mass2;
-        planets[NUMPLANET2].rad = sqrt(planets[NUMPLANET2].mass);
+        planets[NUMPLANET2].rad = sqrt(planets[NUMPLANET2].mass/100);
         planets[NUMPLANET2].xVel = (mass1 * xVel1 - mass2 * xVel2)/(mass1 - mass2);
         planets[NUMPLANET2].yVel = (mass1 * yVel1 - mass2 * yVel2)/(mass1 - mass2);
         planets[NUMPLANET2].xPos = xPos1;
@@ -329,7 +329,7 @@ class Planet {
 
       } else if (mass1 < mass2) {
         planets[NUMPLANET2].mass = mass2 - mass1;
-        planets[NUMPLANET2].rad = sqrt(planets[NUMPLANET2].mass);
+        planets[NUMPLANET2].rad = sqrt(planets[NUMPLANET2].mass/100);
         planets[NUMPLANET2].xVel = (-mass1 * xVel1 + mass2 * xVel2)/(mass1 - mass2);
         planets[NUMPLANET2].yVel = (-mass1 * yVel1 + mass2 * yVel2)/(mass1 - mass2);
         planets[NUMPLANET2].xPos = xPos2;
