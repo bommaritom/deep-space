@@ -43,38 +43,41 @@ void draw() {
   textSize(18);
   fill(0);
   text("Gravitational Constant", 500, 35);
-}
-
-void mouseDragged() {
-  if (gslider.over != true) {
-    if (mouseButton == LEFT) {
-      //Generate random parameters
-      double randX = Math.random() * 5 - 2.5;
-      double randY = Math.random() * 5 - 2.5;
-      float X = (float) randX;
-      float Y = (float) randY;
-      double rand = Math.random() * 6 + 4;
-      float r = (float) rand;
-      //Create new (random) planet
-      planets[currentPlanet].start(mouseX, mouseY, X, Y, r);
-      currentPlanet++;
-      if (currentPlanet >= numPlanets) {
-        currentPlanet = 0;
-      }
-      
-      //Right-click to reset
-    } else if (mouseButton == RIGHT) {
-      background(8, 126, 139);
-      textSize(18);
-      fill(0);
-      text("Gravitational Constant", 500, 35);
-      gslider.display();
-      for (int i = 0; i < numPlanets; i++) {
-        planets[i].on = false;
+  
+  while (mousePressed = true){
+    if (gslider.over != true) {
+      if (mouseButton == LEFT) {
+        //Generate random parameters
+        double randX = Math.random() * 5 - 2.5;
+        double randY = Math.random() * 5 - 2.5;
+        float X = (float) randX;
+        float Y = (float) randY;
+        double rand = Math.random() * 6 + 4;
+        float r = (float) rand;
+        //Create new (random) planet
+        planets[currentPlanet].start(mouseX, mouseY, X, Y, r);
+        currentPlanet++;
+        if (currentPlanet >= numPlanets) {
+          currentPlanet = 0;
+        }
+        
+        //Right-click to reset
+      } else if (mouseButton == RIGHT) {
+        background(8, 126, 139);
+        textSize(18);
+        fill(0);
+        text("Gravitational Constant", 500, 35);
+        gslider.display();
+        for (int i = 0; i < numPlanets; i++) {
+          planets[i].on = false;
+        }
       }
     }
   }
+  
 }
+
+
 
 
 //------------------------------------------------------------------------------------------------------------------------
