@@ -46,7 +46,7 @@ void draw() {
 }
 
 void mousePressed() {
-  if (gslider.over != true) {
+  while (gslider.over != true) {
     if (mouseButton == LEFT) {
       //Generate random parameters
       double randX = Math.random() * 5 - 2.5;
