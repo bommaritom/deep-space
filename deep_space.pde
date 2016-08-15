@@ -3,6 +3,7 @@ int numPlanets = 500;
 int currentPlanet = 0;
 HScrollbar gslider;
 int timeCount;
+int timeSinceClickBuffer;
 int timeSinceClick;
 
 //Gravitational Constant
@@ -11,7 +12,7 @@ float G;
 void setup(){
   timeCount = 0;
   timeSinceClick = 0;
-  
+  timeSinceClickBuffer = 0;
   size(800, 600);
   background(8, 126, 139);
   cursor(CROSS);
@@ -28,7 +29,9 @@ void setup(){
 
 void draw() {
   timeCount++;
-  timeSinceClick++;
+  timeSinceClickBuffer++;
+  if (timeSinceClickBuffer > 200) timeSinceClick++;
+  
   background(8 + (.2 * timeSinceClick), 126 + (.2 * timeSinceClick), 139 + (.2 * timeSinceClick));
   
   for (int i = 0; i < numPlanets; i++) {
@@ -72,6 +75,7 @@ void mousePressed() {
       if (currentPlanet >= numPlanets) {
         currentPlanet = 0;
       }
+      timeSinceClickBuffer = 0;
       timeSinceClick = 0;
       
       //Right-click to reset
