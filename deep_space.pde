@@ -29,7 +29,7 @@ void setup(){
 void draw() {
   timeCount++;
   timeSinceClick++;
-  background(8 + timeSinceClick, 126, 139);
+  background(8 + (.1 * timeSinceClick), 126, 139);
   
   for (int i = 0; i < numPlanets; i++) {
   
