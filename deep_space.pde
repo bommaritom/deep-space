@@ -47,7 +47,7 @@ void draw() {
     gslider.display();
   }
   
-  if (timeCount % (Math.round(Math.random() * 5000)) == 0 && timeSinceClick > 1275 || timeSinceClick == 1275){
+  if (timeCount % (Math.round(Math.random() * 2000)) == 0 && timeSinceClick > 1275 || timeSinceClick == 1275){
     float x = (float) Math.random() * 800;
     float y = (float) Math.random() * 600;
     float X = (float) Math.random() * 5 - 2.5;
