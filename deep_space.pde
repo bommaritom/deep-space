@@ -47,7 +47,7 @@ void draw() {
     gslider.display();
   }
   
-  if (timeCount % (Math.round(Math.random() * 2000)) == 0 && timeSinceClick > 0 || timeSinceClick == 1){
+  if (timeCount % (Math.round(Math.random() * 2000)) == 0 && timeSinceClick > 1275 || timeSinceClick == 1275){
     float x = (float) Math.random() * 800;
     float y = (float) Math.random() * 600;
     float X = (float) Math.random() * 5 - 2.5;
@@ -61,7 +61,7 @@ void draw() {
   fill(0);
   text("Gravitational Constant", 500, 35);
   
-  if (timeSinceClick > 60000) reset();
+  if (timeSinceClick % 60000 == 0) reset();
 }
 
 void mousePressed() {
