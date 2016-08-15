@@ -40,6 +40,16 @@ void draw() {
     gslider.update();
     gslider.display();
   }
+  
+  if (timeCount % 200 == 0){
+    float x = (float) Math.random() * 800;
+    float y = (float) Math.random() * 600;
+    float X = (float) Math.random() * 5 - 2.5;
+    float Y = (float) Math.random() * 5 - 2.5;
+    float r = (float) Math.random() * 6 + 4;
+    planets[currentPlanet].start(x, y, X, Y, r);
+  }
+  
   textSize(18);
   fill(0);
   text("Gravitational Constant", 500, 35);
@@ -49,12 +59,9 @@ void mousePressed() {
   if (gslider.over != true) {
     if (mouseButton == LEFT) {
       //Generate random parameters
-      double randX = Math.random() * 5 - 2.5;
-      double randY = Math.random() * 5 - 2.5;
-      float X = (float) randX;
-      float Y = (float) randY;
-      double rand = Math.random() * 6 + 4;
-      float r = (float) rand;
+      float X = (float) Math.random() * 5 - 2.5;
+      float Y = (float) Math.random() * 5 - 2.5;
+      float r = (float) Math.random() * 6 + 4;
       //Create new (random) planet
       planets[currentPlanet].start(mouseX, mouseY, X, Y, r);
       currentPlanet++;
