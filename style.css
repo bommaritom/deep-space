@@ -39,3 +39,8 @@ div.block {
 	margin: 12px;
 	text-align: center;
 }
+
+canvas {
+	outline: none;
+}
+}
