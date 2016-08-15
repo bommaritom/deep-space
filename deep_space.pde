@@ -76,7 +76,6 @@ void mousePressed() {
       
       //Right-click to reset
     } else if (mouseButton == RIGHT) {
-      background(8, 126, 139);
       textSize(18);
       fill(0);
       text("Gravitational Constant", 500, 35);
