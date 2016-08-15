@@ -46,8 +46,9 @@ void draw() {
     float y = (float) Math.random() * 600;
     float X = (float) Math.random() * 5 - 2.5;
     float Y = (float) Math.random() * 5 - 2.5;
-    float r = (float) Math.random() * 6 + 4;
+    float r = (float) Math.random() * 6 + 3;
     planets[currentPlanet].start(x, y, X, Y, r);
+    currentPlanet++;
   }
   
   textSize(18);
@@ -61,7 +62,7 @@ void mousePressed() {
       //Generate random parameters
       float X = (float) Math.random() * 5 - 2.5;
       float Y = (float) Math.random() * 5 - 2.5;
-      float r = (float) Math.random() * 6 + 4;
+      float r = (float) Math.random() * 6 + 3;
       //Create new (random) planet
       planets[currentPlanet].start(mouseX, mouseY, X, Y, r);
       currentPlanet++;
