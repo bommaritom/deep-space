@@ -29,7 +29,7 @@ void setup(){
 void draw() {
   timeCount++;
   timeSinceClick++;
-  background(8 + (.1 * timeSinceClick), 126, 139);
+  background(8 + (.1 * timeSinceClick), 126 + (.1 * timeSinceClick), 139 + (.1 * timeSinceClick));
   
   for (int i = 0; i < numPlanets; i++) {
   
@@ -44,7 +44,7 @@ void draw() {
     gslider.display();
   }
   
-  if (timeCount % (Math.round(Math.random() * 5000)) == 0){
+  if (timeCount % (Math.round(Math.random() * 5000)) == 0 && timeSinceClick > 2550){
     float x = (float) Math.random() * 800;
     float y = (float) Math.random() * 600;
     float X = (float) Math.random() * 5 - 2.5;
