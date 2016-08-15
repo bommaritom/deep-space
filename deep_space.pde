@@ -30,7 +30,7 @@ void setup(){
 void draw() {
   timeCount++;
   timeSinceClickBuffer++;
-  if (timeSinceClickBuffer > 2000) timeSinceClick++;
+  if (timeSinceClickBuffer > 1000) timeSinceClick++;
   
   background(8 + (.2 * timeSinceClick), 126 + (.2 * timeSinceClick), 139 + (.2 * timeSinceClick));
   
