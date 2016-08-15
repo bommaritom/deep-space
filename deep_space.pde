@@ -80,14 +80,18 @@ void mousePressed() {
       
       //Right-click to reset
     } else if (mouseButton == RIGHT) {
-      textSize(18);
-      fill(0);
-      text("Gravitational Constant", 500, 35);
-      gslider.display();
-      for (int i = 0; i < numPlanets; i++) {
-        planets[i].on = false;
-      }
+      reset();
     }
+  }
+}
+
+void reset(){
+  textSize(18);
+  fill(0);
+  text("Gravitational Constant", 500, 35);
+  gslider.display();
+  for (int i = 0; i < numPlanets; i++) {
+    planets[i].on = false;
   }
 }
 
