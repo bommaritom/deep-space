@@ -48,8 +48,8 @@ void draw() {
   }
   
   if (timeCount % (Math.round(Math.random() * 2000)) == 0 && timeSinceClick > 1275 || timeSinceClick == 1275){
-    float x = (float) Math.random() * 800;
-    float y = (float) Math.random() * 600;
+    float x = (float) (Math.random() * 750) + 25;
+    float y = (float) (Math.random() * 550) + 25;
     float X = (float) Math.random() * 5 - 2.5;
     float Y = (float) Math.random() * 5 - 2.5;
     float r = (float) Math.random() * 6 + 3;
