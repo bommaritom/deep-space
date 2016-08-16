@@ -61,7 +61,7 @@ void draw() {
   fill(0);
   text("Gravitational Constant", 500, 35);
   
-  if (timeSinceClick % 20000 == 0) reset();
+  if (timeSinceClick % 20000 == 19999) reset();
 }
 
 void mousePressed() {
